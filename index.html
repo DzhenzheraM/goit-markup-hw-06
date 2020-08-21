@@ -394,65 +394,84 @@
               </li>
             </ul>
           </li>
-          <!--<li class="style subscription">
-            <h2 class="title">Подпишитесь на рассылку</h2>
-            <p class="mail">E-mail</p>
-          </li>
-          <li class="style">
-            <button class="footer-btn" type="button">
+          <li class="style-footer">
+            <b class="title-footer">Подпишитесь на рассылку</b><br />
+            <input class="text-write" type="text" placeholder="e-mail" /><br />
+            <button type="button" class="btn-studio footer">
               Подписаться
-              <svg class="icon-footer">
+              <svg class="send">
                 <use xlink:href="./img/sprite.svg#icon-send"></use>
               </svg>
             </button>
-          </li>-->
+          </li>
         </ul>
       </div>
     </footer>
     <!--Модалка-->
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
-        <button data-modal-close class="modal-close">
-          <svg class="icon-close">
-            <use xlink:href="./img/sprite.svg#icon-close"></use>
-          </svg>
-        </button>
-        <h2 class="modal-title">
-          Оставьте свои данные, мы вам перезвоним
-        </h2>
-        <ul>
-          <li class="list name">
-            <svg class="icon-name">
+        <form class="modal-form" autocomplete="off">
+          <h2 class="form-title">
+            Оставьте свои данные, мы вам перезвоним
+          </h2>
+          <label class="form-group">
+            <input
+              type="text"
+              name="name-text"
+              class="form-input"
+              placeholder=" "
+            />
+            <svg class="input-icon name">
               <use xlink:href="./img/sprite.svg#icon-name"></use>
             </svg>
-            <p class="text name">Имя</p>
-          </li>
-          <li class="list phone">
-            <svg class="icon-name">
+            <span class="form-label">Имя</span>
+          </label>
+          <label class="form-group">
+            <input type="tel" name="tel" class="form-input" placeholder="   " />
+            <svg class="input-icon phone">
               <use xlink:href="./img/sprite.svg#icon-phone"></use>
             </svg>
-            <p class="text phone">Телефон</p>
-          </li>
-          <li class="list mail">
-            <svg class="icon-name">
+            <span class="form-label">Телефон</span>
+          </label>
+          <label class="form-group">
+            <input
+              type="email"
+              name="mail"
+              class="form-input"
+              placeholder=" "
+            />
+            <svg class="input-icon mail">
               <use xlink:href="./img/sprite.svg#icon-mail"></use>
             </svg>
-            <p class="text mail">Почта</p>
-          </li>
-          <li class="list-coment">
-            <p class="text coment">Коментарий</p>
-          </li>
-          <li class="list-aside">
-            <svg class="icon-tick">
-              <use xlink:href="./img/sprite.svg#icon-Vector"></use>
+            <span class="form-label">Почта</span>
+          </label>
+          <label class="comment">
+            <span class="form-label">Комментарий</span>
+            <textarea
+              placeholder="Введите текст"
+              name="comment"
+              class="textarea"
+            ></textarea>
+          </label>
+          <label class="checkbox-label">
+            <input type="checkbox" name="chekbox" class="checkbox" />
+            <svg class="checkbox-icon">
+              <use xlink:href="./img/sprite.svg#icon-close"></use>
             </svg>
-            <span class="text aside"
+            <span
               >Соглашаюсь с рассылкой и принимаю
-              <a href="">Условия договора</a>
-            </span>
-          </li>
-        </ul>
-        <button class="modal-btn">Отправить</button>
+              <a href="#"> Условия договора</a></span
+            >
+          </label>
+          <div class="form-button">
+            <button type="submit" class="snd-btn">Отправить</button>
+          </div>
+          <button type="button" class="cls-btn" data-modal-close>
+            <svg class="cls-btn-icon">
+              <use xlink:href="./img/sprite.svg#icon-close"></use>
+            </svg>
+          </button>
+        </form>
       </div>
     </div>
     <script src="./js/modal.js"></script>
