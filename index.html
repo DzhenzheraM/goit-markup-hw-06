@@ -396,13 +396,21 @@
           </li>
           <li class="style-footer">
             <b class="title-footer">Подпишитесь на рассылку</b><br />
-            <input class="text-write" type="text" placeholder="e-mail" /><br />
-            <button type="button" class="btn-studio footer">
-              Подписаться
-              <svg class="send">
-                <use xlink:href="./img/sprite.svg#icon-send"></use>
-              </svg>
-            </button>
+            <form>
+              <input
+                class="text-write"
+                placeholder="e-mail"
+                type="email"
+                name="email"
+                autocomplete="off"
+              /><br />
+              <button type="submit" class="btn-studio footer">
+                Подписаться
+                <svg class="send">
+                  <use xlink:href="./img/sprite.svg#icon-send"></use>
+                </svg>
+              </button>
+            </form>
           </li>
         </ul>
       </div>
@@ -410,16 +418,18 @@
     <!--Модалка-->
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
-        <form class="modal-form" autocomplete="off">
+        <form class="modal-form">
           <h2 class="form-title">
             Оставьте свои данные, мы вам перезвоним
           </h2>
           <label class="form-group">
             <input
               type="text"
-              name="name-text"
+              name="name"
               class="form-input"
-              placeholder=" "
+              placeholder="Имя*"
+              required
+              autocomplete="off"
             />
             <svg class="input-icon name">
               <use xlink:href="./img/sprite.svg#icon-name"></use>
@@ -427,7 +437,15 @@
             <span class="form-label">Имя</span>
           </label>
           <label class="form-group">
-            <input type="tel" name="tel" class="form-input" placeholder="   " />
+            <input
+              type="tel"
+              name="phone"
+              class="form-input"
+              placeholder="+380 (**) ***-**-**"
+              autocomplete="off"
+              pattern="[\+]\d{3}\s[\(]\d{2}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}"
+              title="Используйте формат: +380 (67) 359-84-20"
+            />
             <svg class="input-icon phone">
               <use xlink:href="./img/sprite.svg#icon-phone"></use>
             </svg>
@@ -436,9 +454,10 @@
           <label class="form-group">
             <input
               type="email"
-              name="mail"
+              name="email"
               class="form-input"
-              placeholder=" "
+              placeholder="example@site.com"
+              autocomplete="off"
             />
             <svg class="input-icon mail">
               <use xlink:href="./img/sprite.svg#icon-mail"></use>
